@@ -11,7 +11,7 @@ import retrofit2.http.Path
 
 interface RestInterface {
 
-    @GET("/api/Lectures/GetNoticeswithLectureName")
+    @GET("/api/Notices/GetNotices")
     fun getAllNotice(): Call<List<Notice>>
 
 }

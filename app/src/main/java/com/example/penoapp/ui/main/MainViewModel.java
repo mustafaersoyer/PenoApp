@@ -30,8 +30,6 @@ public class MainViewModel extends ViewModel {
 
     final private void loadNotice() {
         RetrofitBuilder.retrofitBuild();
-        JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("id", "8962c635-d42d-43c5-b1e3-fc77fcf71b19");
 
         final RestInterface api = RetrofitBuilder.retrofit.create(RestInterface.class);
         Call<List<Notice>> call = api.getAllNotice();
