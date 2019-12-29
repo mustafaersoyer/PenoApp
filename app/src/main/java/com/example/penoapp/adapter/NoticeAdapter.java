@@ -1,9 +1,7 @@
 package com.example.penoapp.adapter;
 
 import android.content.Context;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffColorFilter;
-import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.penoapp.R;
 import com.example.penoapp.model.Notice;
-import com.example.penoapp.model.Notice_;
 
 import java.text.DateFormatSymbols;
 import java.util.ArrayList;
@@ -26,14 +23,12 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.ViewHolder
 
     Context mCtx;
     List<Notice> noticeList;
-    List<Notice_> notice_List;
     private ItemClickListener mClickListener;
 
 
     public NoticeAdapter(Context mCtx) {
         this.mCtx = mCtx;
         this.noticeList = new ArrayList<>();
-        this.notice_List = new ArrayList<>();
     }
 
     @NonNull
@@ -45,11 +40,11 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        //final Notice_ notice_ = notice_List.get(position);
         final Notice notice = noticeList.get(position);
+
+        holder.lecName.setText(notice.getLectureName());
+        holder.content.setText(notice.getNoticeContent());
         // changeColor(order,holder);
-        //holder.content.setText(notice_.getContent());
-        holder.lecName.setText(notice.getName());
 
         //holder.cardView.setOnClickListener(v -> mClickListener.onItemClick(holder.layout));
 
@@ -96,7 +91,7 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.ViewHolder
 
         public ViewHolder(View itemView) {
             super(itemView);
-            content = itemView.findViewById(R.id.content);
+            content = itemView.findViewById(R.id.notice_content);
             lecName = itemView.findViewById(R.id.lecName);
 
         }

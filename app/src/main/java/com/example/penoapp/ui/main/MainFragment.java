@@ -53,13 +53,10 @@ public class MainFragment extends Fragment implements NoticeAdapter.ItemClickLis
 
         mViewModel.getAllNotice().observe(this, new Observer<List<Notice>>() {
             @Override
-            public void onChanged(@Nullable List<Notice> artifactsList) {
-                noticeAdapter.setItems(artifactsList);
-                Log.d("girdik","girdik");
+            public void onChanged(@Nullable List<Notice> noticeList) {
+                noticeAdapter.setItems(noticeList);
             }
         });
-        Log.d("girdik2","girdik2");
-
 
         return root;
     }

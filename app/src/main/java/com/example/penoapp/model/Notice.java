@@ -7,60 +7,27 @@ import java.util.List;
 
 public class Notice {
 
-    @SerializedName("id")
+    @SerializedName("noticeContent")
     @Expose
-    private Integer id;
-    @SerializedName("name")
+    private String noticeContent;
+    @SerializedName("lectureName")
     @Expose
-    private String name;
-    @SerializedName("acaId")
-    @Expose
-    private Integer acaId;
-    @SerializedName("lecAndStudents")
-    @Expose
-    private Object lecAndStudents;
-    @SerializedName("notices")
-    @Expose
-    private List<Notice_> notices = null;
+    private String lectureName;
 
-    public Integer getId() {
-        return id;
+    public String getNoticeContent() {
+        return noticeContent;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setNoticeContent(String noticeContent) {
+        this.noticeContent = noticeContent;
     }
 
-    public String getName() {
-        return name;
+    public String getLectureName() {
+        return lectureName;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAcaId() {
-        return acaId;
-    }
-
-    public void setAcaId(Integer acaId) {
-        this.acaId = acaId;
-    }
-
-    public Object getLecAndStudents() {
-        return lecAndStudents;
-    }
-
-    public void setLecAndStudents(Object lecAndStudents) {
-        this.lecAndStudents = lecAndStudents;
-    }
-
-    public List<Notice_> getNotices() {
-        return notices;
-    }
-
-    public void setNotices(List<Notice_> notices) {
-        this.notices = notices;
+    public void setLectureName(String lectureName) {
+        this.lectureName = lectureName;
     }
 
 }
