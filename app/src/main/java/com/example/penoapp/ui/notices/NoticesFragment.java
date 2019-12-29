@@ -1,4 +1,4 @@
-package com.example.penoapp.ui.main;
+package com.example.penoapp.ui.notices;
 
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -11,7 +11,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,14 +22,14 @@ import com.example.penoapp.model.Notice;
 
 import java.util.List;
 
-public class MainFragment extends Fragment implements NoticeAdapter.ItemClickListener {
+public class NoticesFragment extends Fragment implements NoticeAdapter.ItemClickListener {
 
-    private MainViewModel mViewModel;
+    private NoticesViewModel mViewModel;
     RecyclerView recyclerView;
     NoticeAdapter noticeAdapter;
 
-    public static MainFragment newInstance() {
-        return new MainFragment();
+    public static NoticesFragment newInstance() {
+        return new NoticesFragment();
     }
 
     @Nullable
@@ -40,7 +39,7 @@ public class MainFragment extends Fragment implements NoticeAdapter.ItemClickLis
 
         View root = inflater.inflate(R.layout.main_fragment, container, false);
         mViewModel =
-                ViewModelProviders.of(this).get(MainViewModel.class);
+                ViewModelProviders.of(this).get(NoticesViewModel.class);
 
         recyclerView = root.findViewById(R.id.rvNotices);
 
@@ -64,7 +63,7 @@ public class MainFragment extends Fragment implements NoticeAdapter.ItemClickLis
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
+        mViewModel = ViewModelProviders.of(this).get(NoticesViewModel.class);
         // TODO: Use the ViewModel
     }
 

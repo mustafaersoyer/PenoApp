@@ -1,10 +1,12 @@
-package com.example.penoapp;
+package com.example.penoapp.ui.signUp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class sign extends AppCompatActivity {
+import com.example.penoapp.R;
+
+public class SignUp extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

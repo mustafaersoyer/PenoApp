@@ -1,4 +1,4 @@
-package com.example.penoapp.ui.main;
+package com.example.penoapp.ui.notices;
 
 import android.util.Log;
 
@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModel;
 import com.example.penoapp.model.Notice;
 import com.example.penoapp.api.RestInterface;
 import com.example.penoapp.utils.RetrofitBuilder;
-import com.google.gson.JsonObject;
 
 import java.util.List;
 
@@ -17,7 +16,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainViewModel extends ViewModel {
+public class NoticesViewModel extends ViewModel {
     private MutableLiveData<List<Notice>> noticeList;
 
     final public LiveData<List<Notice>> getAllNotice() {

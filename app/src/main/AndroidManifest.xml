@@ -12,11 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Noticeput"></activity>
-        <activity android:name=".sign" />
-        <activity android:name=".loginscreen.StudentLogin" />
+        <activity android:name=".ui.sendNotices.SendNotice"></activity>
+        <activity android:name=".ui.signUp.SignUp" />
+        <activity android:name=".ui.studentLogin.StudentLogin" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".loginscreen.loginf">
+        <activity android:name=".ui.academicianLogin.AcademicianLogin"/>
+
+        <activity android:name=".ui.firstScreen.FirstScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

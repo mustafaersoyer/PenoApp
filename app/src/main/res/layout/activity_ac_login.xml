@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.studentLogin.StudentLogin"
+    tools:context=".ui.academicianLogin.AcademicianLogin"
     android:background="@drawable/back">
 
     <ImageView
-        android:id="@+id/imageView4"
-
+        android:id="@+id/imageView5"
         android:layout_width="327dp"
         android:layout_height="283dp"
         android:layout_alignParentStart="true"
@@ -22,7 +21,7 @@
         app:srcCompat="@drawable/logo_transparent" />
 
     <EditText
-        android:id="@+id/stNo"
+        android:id="@+id/acNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -32,13 +31,13 @@
         android:layout_marginBottom="249dp"
         android:ems="10"
         android:gravity="center"
-        android:hint="Student Number"
+        android:hint="Academician Number"
         android:inputType="textPersonName"
         android:textColor="@color/red"
         android:textColorHint="@color/red" />
 
     <EditText
-        android:id="@+id/stPass"
+        android:id="@+id/acPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -53,7 +52,7 @@
 
     <Button
 
-        android:id="@+id/btnStudentLogin"
+        android:id="@+id/btnAcLogin"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -65,7 +64,7 @@
         />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

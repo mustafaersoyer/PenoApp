@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Noticeput"
+    tools:context=".ui.sendNotices.SendNotice"
     android:gravity="center"
     android:background="@drawable/back">
     <Spinner
@@ -42,5 +42,10 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         app:srcCompat="@drawable/logo_transparent" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/btnSendNotice"/>
 
 </LinearLayout>
